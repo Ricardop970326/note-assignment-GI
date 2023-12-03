@@ -1,3 +1,4 @@
+// impoort the modules
 const fs = require('fs')  
 const chalk = require('chalk')
     //declare variable equals to a function
@@ -32,7 +33,7 @@ const chalk = require('chalk')
     }
 }
 
-//2. create an export and removeNote function from notes.js
+// create an export and removeNote function from notes.js
                     //function (title) {
 const removeNote = (title) => {
     //4. have remove log the title of the note to remove
@@ -68,7 +69,7 @@ const listNotes = () => {
     })
 }
 
-//create function read
+//create function read to read the notes 
 const readNote = (title) => {
     const notes = loadNotes()
     const note = notes.find((note) => note.title === title)

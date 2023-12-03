@@ -29,7 +29,7 @@ yargs.command({
         type: 'string'
       }
     },
-    // handler: function (argv)
+    // handler: function (argv) for the add command
     handler(argv) {
 //         console.log('Title: ' + argv.title)
 // //3. log the body value in the handler function
@@ -45,6 +45,7 @@ yargs.command({
 yargs.command({
     command: 'remove',
     describe: 'Remove a note',
+    //adding builder
     builder: {
         // cahllenge setup command option and function
 //
@@ -92,13 +93,14 @@ yargs.command({
     // handler: function () {
     handler(argv) {
         // console.log('Reading the notes!')
-        // call on the readNote
+        // call on the readNote FUNCTION
         notes.readNote(argv.title)
     }
 })
 
 // console.log(process.argv)
 // console.log(yargs.argv)
+//PARSING THE COMAND LINE ARGUMENT
 yargs.parse()
 
 
